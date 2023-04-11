@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
@@ -11,8 +12,12 @@ const Header = () => {
       <div className="flex items-center h-full max-w-[1240px] justify-between mx-auto ">
         <div className="uppercase font-bold text-3xl">Logo.</div>
         <div className="hidden md:flex ">
-          <div className="px-4 hover:cursor-pointer">Home</div>
-          <div className="px-4 hover:cursor-pointer">About</div>
+          <div className="px-4 hover:cursor-pointer">
+            <Link to="/">Home</Link>
+          </div>
+          <div className="px-4 hover:cursor-pointer">
+            <Link to="/about">About</Link>
+          </div>
           <div className="px-4 hover:cursor-pointer">Product</div>
         </div>
 
